@@ -1,0 +1,22 @@
+{
+  "name": "express-admin",
+  "version": "1.0.0",
+  "description": "express-admin service",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "jasmine": "^3.5.0",
+    "nodemon": "^2.0.3"
+  },
+  "scripts": {
+    "test-init": "node_modules/.bin/jasmine init",
+    "test": "node_modules/.bin/jasmine",
+    "start-dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "author": "Filipe Rodrigues",
+  "license": "ISC"
+}
