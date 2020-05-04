@@ -4,7 +4,10 @@
   "description": "express-admin service",
   "main": "app.js",
   "dependencies": {
+    "consign": "^0.1.6",
     "express": "^4.17.1",
+    "passport": "^0.4.1",
+    "passport-http-bearer": "^1.0.1",
     "request": "^2.88.2"
   },
   "devDependencies": {

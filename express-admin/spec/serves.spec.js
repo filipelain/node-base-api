@@ -27,17 +27,16 @@ describe("server functionality", () => {
     describe("GET /users",()=>{
         data = {};
         beforeAll((done)=>{
-            Request.get(baseUrl+"login",(error, response,body)=>{
+            Request.get(baseUrl+"users",(error, response,body)=>{
                     data.status = response.statusCode;
                     done();
             });
         });
 
-        it("users",()=>{
+        it("users not authorized",()=>{
             expect(data.status).toBe(401);
         })
     });
-
 
     afterAll(() => server.close());
 });
