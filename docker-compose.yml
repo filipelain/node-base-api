@@ -1,10 +1,12 @@
 version: '3'
-services: 
-    nodejs:
-        build:
-            dockerfile: .dockerfile
-            context: .
-        image: nodejs-app
-        container_name: nodejs
+services:
+    node:
+        image: node:12
+        container_name: node-express
+        volumes: 
+            - ./express-admin/:/usr/src/app
+        working_dir: /usr/src/app
+        command: bash -c "npm install && npm run test"
         ports: 
-            - "3000:3000" 
+            - 3000:3000
+       
