@@ -1,30 +1,36 @@
-module.exports = app => {
+const modelUser = {};
 
-    let user = {
-        id: '0',
-        name: 'João',
-        surName: 'Ninguem'
+
+let user = {
+    id: '0',
+    name: 'João',
+    surName: 'Ninguem'
+};
+
+let users = [user];
+
+modelUser.find = (id) => {
+    if (id == undefined) {
+        return error = {status: '404', message: 'user not found'}
     }
-
-    let users = [user]
-
-    this.find = (id) => {
-        if (id == undefined) {
-            return getAll();
-        }
+    user = this.findById(id);
+    if (!user) {
+        return error = {status: '404', message: 'user not found'}
     }
-
-    function getAll() {
-        return users;
-    }
-
-    function findById(id) {
-        user.id = id;
-        return user
-    }
+    return {status: '200', user}
+};
 
 
-        return this;
+modelUser.getAll = () => {
+    return users;
+};
+
+modelUser.findById = (id) => {
+    user.id = id;
+    return user
+};
+
+module.exports = modelUser;
 
 
-}
+

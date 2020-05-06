@@ -8,7 +8,7 @@ passport.use(new BearerStrategy({},
         } else {
             return done(null, false);
         }
-    }))
+    }));
 
 
 

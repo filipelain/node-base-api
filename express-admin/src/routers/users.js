@@ -1,5 +1,6 @@
-module.exports = app => {
-    const user = app.controllers.users;    
-    app.get('/users', user.index)
-    return this;
-}
+const router = require('express').Router();
+const userController = require('../controllers/users');
+
+router.get('/',userController.index );
+
+module.exports = router;

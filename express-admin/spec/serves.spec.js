@@ -46,7 +46,7 @@ describe("server functionality", () => {
                  data.status = response.statusCode;
                  done();
              });
-         })
+         });
          it("users not authorized", () => {
              expect(data.status).toBe(401);
          })
