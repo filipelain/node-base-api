@@ -5,7 +5,7 @@ const baseUrl = 'http://localhost:3000/';
 
 describe("server functionality", () => {
     let server;
-    beforeAll(() => server = require("../app"));
+    beforeAll(() => server = require("../server"));
 
     let token = 1;
     let option = {

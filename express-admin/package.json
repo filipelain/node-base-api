@@ -17,8 +17,8 @@
   "scripts": {
     "test-init": "node_modules/.bin/jasmine init",
     "test": "node_modules/.bin/jasmine",
-    "start-dev": "nodemon app.js",
-    "start": "node app.js"
+    "start-dev": "nodemon server.js",
+    "start": "node server.js"
   },
   "author": "Filipe Rodrigues",
   "license": "ISC"
