@@ -8,7 +8,7 @@ app.get('/', auth.isAuthenticated, (req, res) => res.status(200).send({
 }));
 
 const userRouter = require('./src/routers/users');
-app.use('/users',userRouter);
+app.use('/users', userRouter);
 
 
 module.exports = app;
